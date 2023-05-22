@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao sistema</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main class="form">
+        <form action="#" method="get">
+            <fieldset class="forms">
+                <legend>Acesso ao portal</legend>
+                <section>
+                    <label for="login">Username</label>
+                    <input class="form-input" type="text" id="login">
+                </section>
+
+                <section>
+                    <label for="senha">Senha</label>
+                    <input class="form-input-password" type="password" id="senha" minlength="8" name="senha">
+                </section>
+
+                <section class="form">
+                    <button class="form-button" type="submit" id="enviar" name="enviar">Enviar</button>
+                    <button class="form-button" type="reset" id="limpar" name="limpar">Limpar</button>
+                </section>
+            </fieldset>
+
+            <fieldset class="forms">
+                <legend>Envio de arquivos</legend>
+                <label for="arquivos">Arquivos</label>
+                <input type="file" id="file" name="file" multiple="multiple">
+            </fieldset>
+
+            <fieldset class="forms">
+                <legend>Escolha suas opções</legend>
+                <section>
+                    <input type="checkbox" id="viagens" name="viagens" checked>
+                    <label for="viajar">Viajar</label>
+                </section>
+
+                <input type="checkbox" id="dormir" name="dormir" checked>
+                <label for="viajar">Dormir</label>
+            </fieldset>
+
+            <fieldset class="forms">
+                <legend>Mude a cor da página</legend>
+                <input type="color" id="cor" name="cor" value="#ff00ff">
+                <input type="button" onclick="novaCor()" id="mudaCor" name="mudaCor" value="Mudar cor">
+            </fieldset>
+        </form>
+    </main>
+
+    <script>
+        function novaCor() {
+            let cor = document.getElementById('cor').value;
+            let forms = document.querySelector('form');
+
+            forms.style.background = cor;
+        }
+    </script>
+</body>
+
+</html>
